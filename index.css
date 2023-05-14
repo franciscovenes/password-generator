@@ -1,3 +1,129 @@
 body {
-    margin: 0;
+  margin: 0;
+  background: #1c1c1c;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: white;
+}
+
+.container {
+  box-sizing: border-box;
+  min-width: 300px;
+  max-width: 600px;
+  background: #1f2937;
+  margin: 20px auto;
+  padding: 50px;
+}
+
+.light-mode {
+  background: #ecfdf5;
+  color: black;
+}
+
+.container h1 {
+  margin: 25px 0 0 0;
+  font-family: "Karla", sans-serif;
+}
+
+.container span {
+  color: #0ea5e9;
+}
+
+.highlight {
+  margin: 10px 0 50px 0;
+  color: #d5d4d8;
+}
+
+.highlight-light {
+  color: #6b7280;
+}
+
+#generate-btn {
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  background: #0ea5e9;
+  border-radius: 3px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#password-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 20px 0;
+}
+
+#password-options label {
+  font-size: 0.75em;
+}
+
+#pwd-length-input {
+  box-sizing: border-box;
+  background-color: #9ca3af;
+  width: 80px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  margin-left: 5px;
+  text-shadow: 0 0 2px black;
+}
+
+.password-checkbox {
+  display: flex;
+  gap: 5px;
+}
+
+#password-box-container {
+  box-sizing: border-box;
+  padding-top: 35px;
+  margin-top: 35px;
+  border-top: solid 1px #2f3e53;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#password-box-container div {
+  display: flex;
+  box-sizing: border-box;
+  background: #273549;
+  width: 210px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  color: #7dd3fc;
+  font-weight: 500;
+}
+
+.copy-img-btn {
+  height: 30px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(102%) contrast(105%);
+  cursor: pointer;
+}
+
+.copy-img-btn-light {
+  filter: invert(0%) sepia(99%) saturate(0%) hue-rotate(358deg) brightness(98%);
+}
+
+.mode-btn {
+  margin-top: 20px;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  background: url("img/dark.png") center / cover;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(102%) contrast(105%);
+}
+
+.light-mode-btn {
+  background: url("img/light.png") center / cover;
+  filter: invert(0%) sepia(99%) saturate(0%) hue-rotate(358deg) brightness(98%)
+    contrast(100%);
 }

@@ -1,9 +1,63 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <h1></h1>
-        <script src="index.js"></script>
-    </body>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Karla:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title">Generate a <br /><span>random password</span></h1>
+      <p class="highlight">Never use an insecure password again.</p>
+      <div id="password-options">
+        <label>
+          Set password size (max 20)
+          <input
+            id="pwd-length-input"
+            type="number"
+            value="15"
+            min="8"
+            max="20"
+          />
+        </label>
+        <label class="password-checkbox"
+          >No numbers
+          <input id="no-numbers" type="checkbox" />
+        </label>
+        <label class="password-checkbox"
+          >No symbols
+          <input id="no-symbols" type="checkbox" />
+        </label>
+      </div>
+      <button id="generate-btn" onclick="getPasswords()">
+        Generate passwords
+      </button>
+
+      <div id="password-box-container">
+        <div id="password-one" class="password-box"></div>
+        <img
+          class="copy-img-btn"
+          src="img/copy.png"
+          alt="copy icon"
+          onclick="copyPassword(1)"
+        />
+        <div id="password-two" class="password-box"></div>
+        <img
+          class="copy-img-btn"
+          src="img/copy.png"
+          alt="copy icon"
+          onclick="copyPassword(2)"
+        />
+      </div>
+      <div class="mode-btn" onclick="toggleMode()"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
